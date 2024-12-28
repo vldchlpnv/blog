@@ -1,0 +1,11 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}Добавить комментарий{% endblock %}
+{% block content %}
+{% if comment %}
+<h2> Ваш комментарий успешно добавлен </h2>
+<p><a href="{{ post.get_absilut_url }}">Вернуться назад</a></p>
+{% else %}
+{% include 'blog/post/includes/comment_form.html' %}
+{% endif %}
+{% endblock %}
